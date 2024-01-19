@@ -2,9 +2,10 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   windowType: 'window',
-  youtubeId: 'dL7gfnEB3T8?si=W3f0lOYjKF2XmWvL',
+  youtubeId: 'peuVFBTt47o?si=qGLXgwfCzisi3JDK',
   loading: false,
-  videoRef: null
+  videoRef: null,
+  selectedVideoId: 1
 }
 
 export const stateSlice = createSlice({

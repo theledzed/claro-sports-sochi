@@ -1,29 +1,7 @@
 'use client'
-import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
+import styled from 'styled-components'
 import { useAppSelector } from '@/redux/hooks'
-
-const reveal = keyframes`
-  from {
-    opacity: 0;
-    translate: 0 100px;
-    scale: .5;
-  }
-  to { 
-    opacity: 1;
-    translate: 0 0px;
-    scale: 1;
-  }
-`
-
-const scale = keyframes`
-  from {
-    scale: 0;
-  }
-  to { 
-    scale: 1;
-  }
-`
 
 const EventContainer = styled.div`
   display: flex;
@@ -33,10 +11,6 @@ const EventContainer = styled.div`
   img {
     cursor: pointer;
   }
-  @media (min-width: 1201px) {
-    animation-name: ${scale};
-    animation-duration: 5s;
-  }
   @media (max-width: 1200px) {
     width: 328px;
     padding: 0px;
@@ -44,9 +18,6 @@ const EventContainer = styled.div`
   @media (max-width: 800px) {
     flex-direction: column;
     margin-bottom: 1em;
-    animation: ${reveal} linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 50%;
   }
   &:hover {
     scale: 1.1;
@@ -70,10 +41,6 @@ const Title = styled.span`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  @media (min-width: 1201px) {
-    animation-name: ${scale};
-    animation-duration: 5s;
-  }
 `
 
 interface Props {

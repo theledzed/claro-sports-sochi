@@ -21,7 +21,7 @@ const YoutubeContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 2;
-  min-height: 365px;
+  min-height: 400px;
   animation-name: ${scale};
   animation-duration: 5s;
 `
