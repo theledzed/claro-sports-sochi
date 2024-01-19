@@ -5,13 +5,14 @@ import AllEventsContainer from '@/sections/AllEvents/AllEventsContainer'
 import Event from '@/coreComponents/Event'
 import EventsSectionContainer from '@/sections/AllEvents/EventsSectionContainer'
 import GraySeparator from '@/sections/AllEvents/GraySeparator'
+import React from 'react'
 import TitleSportsList from '@/sections/AllEvents/TitleSportsList'
 import { setState } from '@/redux/features/stateSlice'
 
 export default function AllEvents(): JSX.Element {
   const dispatch = useAppDispatch()
   const state = useAppSelector((state) => state.stateReducer)
-  const { videoRef } = state
+  const { videoRef = React.useRef<HTMLInputElement>(null) } = state
 
   const onChangeVideo = (youtubeId: string): any => {
     videoRef?.current?.scrollIntoView({ behavior: 'smooth' })

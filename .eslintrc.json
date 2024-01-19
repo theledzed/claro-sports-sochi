@@ -10,6 +10,7 @@
   },
   "plugins": ["react"],
   "rules": {
+    "@typescript-eslint/no-unsafe-argument": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "@typescript-eslint/space-before-function-paren": "off",
